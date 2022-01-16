@@ -3,7 +3,7 @@ import { deleteMultiple } from '../controllers/mutipleTweetDelete.controller';
 
 //Scheduled for every 1 hour
 
-export const scheduleDelete = new CronJob('0 * * * *', () => {
+export const scheduleDelete = new CronJob('0 */8 * * *', () => {
     console.log('Cron job invoked!');
     deleteMultiple();
 });
